@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('html, body').animate({
+                scrollTop: $('.about-image').offset().top
+            }, 'slow');
+        });
+
+    </script>
+    <!-- <script>
+      $(window).scroll(
+      {
+          previousTop: 0
+      },
+      function () {
+      var currentTop = $(window).scrollTop();
+      if (currentTop < this.previousTop) {
+          $(".navbar").show();
+      } else {
+          $(".navbar").hide();
+      }
+      this.previousTop = currentTop;
+      });
+    </script> -->
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+<div class = "about-image" id="about"></div>
+<div class="about">
+  <section>
+    <h1>Kevin Zhang</h1>
+    <p>Welcome!</p>
+  </section>
+</div>
+<div class="experience" id="experience">
+    <div class="image" id="image">
+    </div>
+    <div class="timeline" style="transform: translate(0%,10%)">
+      <div class="container left">
+        <div class="content">
+          <h2>Summer 2019 - Research Park</h2>
+          <h3>Catastrophe Modeling Intern</h3>
+          <ul>
+            <li>Added new features to an R-script tool which created more sophisticated reports for risk modelers and pricing actuaries</li>
+            <li>Worked on a Python tool to automate the manual process of data downloads</li>
+            <li>Supported full-time modelers by running catastrophe modeling software and SQL queries</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>Spring 2019</h2>
+          <h3>ATLAS Intern</h3>
+          <ul>
+            <li>Worked with Professor Rebecca Thornton, a developmental economist interested in issues related to education, health and gender</li>
+            <li>Used data about mothers around the world returning to the workforce to analyze how their salary changed due to motherhood </li>
+            <li>Created visuals while analyzing the data using STATA and Excel</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h2>Fall 2018</h2>
+          <h3>Tennis Instructor</h3>
+          <ul>
+            <li>Instructed students from preschool to high school in tennis</li>
+            <li>Communicated and worked with other coaches about lesson plans</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="line">
+    </div>
+</div>
+<div class = "main" id = "projects" style="background-image: url(images/rocks.jpg)">
+    <div class = "description">
+      <h2>Go Squirrel</h2>
+      <p>This is a 2D infinite runner I helped create! I implemented the game mechanics.</p>
+      <br>
+      <p>Press W to stop the squirrel from moving forward and try to go as far as you can!</p>
+    </div>
+    <div class = "project">
+      <iframe src="https://i.simmer.io/@kzhang23187/go-squirrel" style="width: 100%; height: 100%;"></iframe>
+    </div>
+</div><!--
+--><div class="main" id="contact" style="background-image: url(images/jump.jpg)">
+
+</div>
+
+</body>
+
+
+</html>
